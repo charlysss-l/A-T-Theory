@@ -1,0 +1,107 @@
+.header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.navbar {
+    text-align: center;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navList {
+    list-style-type: none;
+}
+
+.navLink {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navLink a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+   
+}
+
+.navLink a:hover {
+    color: #4c8eaf;
+}
+
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 90%;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+/* Self-Efficacy Theory Section */
+#self-efficacy-theory {
+    background-color: #eef0fa;
+    border-radius: 8px;
+    padding: 30px;
+    
+}
+
+#self-efficacy-theory p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#self-efficacy-theory ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#self-efficacy-theory li {
+    margin: 10px 0;
+}
+
+/* Influences of Self-Efficacy Section */
+#influences {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#influences ol {
+    list-style-type: decimal;
+    margin-left: 30px;
+}
+
+#influences li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+#influences strong {
+    font-weight: 600;
+}
+
+
+

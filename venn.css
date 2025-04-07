@@ -1,0 +1,166 @@
+
+/* Header Styles */
+.header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.navbar {
+    text-align: center;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navList {
+    list-style-type: none;
+}
+
+.navLink {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navLink a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+   
+}
+
+.navLink a:hover {
+    color: #4c8eaf;
+}
+
+
+/* Section Styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Venn Diagram Styling */
+.venn-diagram-placeholder {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: #ffffffeb;
+
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.venn-diagram-placeholder svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Circle Styles */
+circle {
+    transition: transform 0.3s ease;
+}
+
+circle:hover {
+    transform: scale(1.05);
+}
+
+/* Venn Diagram Labels */
+.venn-diagram-placeholder text {
+    font-weight: bold;
+    fill: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlap Label Styling */
+.venn-diagram-placeholder text {
+    font-size: 14px;
+}
+
+.venn-diagram-placeholder text:nth-child(1) { /* Confidence */
+    fill: #333;
+    font-size: 14px;
+}
+
+.venn-diagram-placeholder text:nth-child(2) { /* Positive Self Improvement */
+    fill: #ff6f61;
+    font-size: 14px;
+}
+
+.venn-diagram-placeholder text:nth-child(3) { /* Motivation */
+    fill: #ffcc00;
+    font-size: 14px;
+}
+
+.venn-diagram-placeholder text:nth-child(4) { /* Empowerment */
+    fill: #1d3557;
+    font-size: 14px;
+}
+
+/* Section Title */
+#self-efficacy-vs-self-esteem-vs-growth-mindset h1, #self-efficacy-vs-self-esteem-vs-growth-mindset h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #8d9fb8;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
+
+}
+#self-efficacy-vs-self-esteem-vs-growth-mindset p{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.587);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
+
+}
+
+#self-efficacy-vs-self-esteem-vs-growth-mindset{
+    background: url('images/venn-bg.jpg') center/cover no-repeat fixed;
+}
+
+/* List Styling */
+self-efficacy-vs-self-esteem-vs-growth-mindset ul, ol {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+self-efficacy-vs-self-esteem-vs-growth-mindset ul li, ol li {
+    margin-bottom: 10px;
+}
+
+self-efficacy-vs-self-esteem-vs-growth-mindset ul li strong,#advantages-of-self-efficacy ul li strong,  ol li strong {
+    color: #e76f51;
+}
+
+/* Advantages Section */
+#advantages-of-self-efficacy {
+   
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0);
+}
+
+#advantages-of-self-efficacy ul {
+    padding-left: 30px;
+}
+
+#implications-of-self-efficacy {
+
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}

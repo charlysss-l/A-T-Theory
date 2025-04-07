@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A&T Theory</title>
+    <link rel="stylesheet" href="venn.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
+            <a href="index.html" class="logo">A&T Theory</a>
             <ul class="navList">
                 <li class="navLink"><a href="index.html">Home</a></li>
                 <li class="navLink"><a href="overview.html">Overview</a></li>
@@ -20,18 +22,39 @@
 
     <section id="self-efficacy-vs-self-esteem-vs-growth-mindset">
         <h1>Self-Efficacy vs. Self-Esteem vs. Growth Mindset</h1>
-        <p>A person’s level of self-efficacy, self-esteem, and growth mindset influences how they approach challenges and success. Below is a comparison of the three concepts:</p>
+        <p>A person’s level of self-efficacy, self-esteem, and growth mindset influences how they approach challenges and success. Below is a comparison of the three concepts</p>
+    </section>
 
+    <section class="selfUL">
         <h2>Comparison</h2>
         <ul>
             <li><strong>Self-Efficacy:</strong> Refers to a person’s belief that she can do what’s necessary to successfully achieve a specific goal or task.</li>
             <li><strong>Self-Esteem:</strong> Refers to a person’s more general sense of self-worth.</li>
             <li><strong>Growth Mindset:</strong> Refers to the belief that one’s abilities can change over time as a result of effort, perseverance, and practice.</li>
         </ul>
-
-        <!-- Visual: Venn Diagram (You can later add a visual diagram of the Venn diagram here) -->
+    </section>
+    <section>
+        <!-- Visual: Venn Diagram -->
         <div class="venn-diagram-placeholder">
-            <p><em>Venn diagram comparing Self-Efficacy, Self-Esteem, and Growth Mindset goes here.</em></p>
+            <svg width="1000" height="800" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle for Self-Efficacy -->
+                <circle cx="250" cy="300" r="150" fill="rgba(42, 157, 143, 0.6)" stroke="black" stroke-width="3"/>
+                <text x="185" y="270" font-size="18" font-weight="bold" fill="#2a9d8f">Self-Efficacy</text>
+
+                <!-- Circle for Self-Esteem -->
+                <circle cx="400" cy="300" r="150" fill="rgba(233, 102, 81, 0.6)" stroke="black" stroke-width="3"/>
+                <text x="350" y="270" font-size="18" font-weight="bold" fill="#e76f51">Self-Esteem</text>
+
+                <!-- Circle for Growth Mindset -->
+                <circle cx="550" cy="300" r="150" fill="rgba(125, 149, 191, 0.6)" stroke="black" stroke-width="3"/>
+                <text x="485" y="270" font-size="18" font-weight="bold" fill="#1d3557">Growth Mindset</text>
+
+                <!-- Intersection Labels -->
+                <text x="200" y="350" font-size="10" fill="black">Confidence</text>
+                <text x="340" y="335" font-size="10"  fill="black">Positive Self Improvement</text>
+                <text x="445" y="350" font-size="10"  fill="black">Motivation</text>
+                <text x="365" y="420" font-size="10"  fill="black">Empowerment</text>
+            </svg>
         </div>
     </section>
 
@@ -48,11 +71,12 @@
     <section id="implications-of-self-efficacy">
         <h2>Implications of Self-Efficacy Theory</h2>
         <ol>
-            <li><strong>Pygmalion Effect:</strong> This is the phenomenon where higher expectations from others lead to improved performance. When leaders or managers believe in an individual's abilities and set high expectations, the individual is more likely to perform better due to increased self-efficacy and motivation. This aligns with the self-fulfilling prophecy where believing in someone’s potential can enhance their self-efficacy and performance.</li>
-            <li><strong>Training Programs:</strong> Self-efficacy theory suggests that training programs can be more effective when they are designed to boost participants' confidence in their abilities. By ensuring employees feel capable of mastering the skills being taught, these programs can increase motivation, persistence, and overall performance. A focus on enactive mastery (gaining experience through successful practice) in training helps build self-efficacy.</li>
-            <li><strong>Make Use of Enactive Mastery:</strong> Enactive mastery refers to gaining confidence through personal experience and success. In organizational settings, this can be applied by providing employees with opportunities to successfully complete tasks or challenges, which, in turn, builds their self-efficacy. As employees achieve success in their roles, their belief in their capabilities grows, leading to higher performance.</li>
-            <li><strong>Galatea Effect:</strong> This effect refers to the idea that an individual's belief in their own abilities can influence their performance. If individuals have high self-efficacy and believe they can succeed, they are more likely to set higher goals, work harder, and ultimately achieve better results. In an organizational context, fostering self-belief is key to motivating employees to reach their potential. This is the opposite of the Pygmalion Effect, where external expectations influence performance; in the Galatea Effect, internal beliefs are the driving force.</li>
+            <li><strong>Pygmalion Effect:</strong> This is the phenomenon where higher expectations from others lead to improved performance...</li>
+            <li><strong>Training Programs:</strong> Self-efficacy theory suggests that training programs can be more effective...</li>
+            <li><strong>Make Use of Enactive Mastery:</strong> Enactive mastery refers to gaining confidence through personal experience...</li>
+            <li><strong>Galatea Effect:</strong> This effect refers to the idea that an individual's belief in their own abilities...</li>
         </ol>
     </section>
+
 </body>
 </html>

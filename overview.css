@@ -78,11 +78,14 @@
     justify-content: center;
     flex-direction: column;
 }
-
+#definition h2{
+    font-size: 30px;
+}
 #definition p {
     font-size: 20px;
     margin-top: 20px;
 }
+
 
 /* History Section */
 #history{
