@@ -1,44 +1,95 @@
-
-/* Header Styles */
+/* Navbar styles */
 .header {
     background-color: transparent;
     padding: 20px 0;
 }
-
 .navbar {
+    position: relative;
     text-align: center;
+}
+
+/* Hamburger menu (burger icon) */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile navbar hidden by default */
+.navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    
 }
 .logo{
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.navList {
-    list-style-type: none;
-}
+    font-size: 30px;
 
-.navLink {
-    display: inline-block;
+}
+.navLink a{
     margin: 0 15px;
-}
-
-.navLink a {
-    color: black;
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-   
+    color: black;
+}
+.navLink a:hover{
+    color: rgb(40, 40, 144);
 }
 
-.navLink a:hover {
-    color: #4c8eaf;
-}
+/* Burger Menu: Show when screen is small */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links by default on mobile */
+    .navList {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
 
+    /* Show the burger icon on mobile */
+    .burger {
+        display: flex;
+    }
+
+    /* Show the navList when the burger is clicked */
+    .navList.active {
+        display: flex;
+    }
+
+    /* Adjust nav links inside the burger menu */
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+}
 /* Conclusion Section Styling */
 .conclusion {
-    background: url('images/conclusion.jpg') no-repeat center center fixed; 
+    background: url('images/conclusion.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     padding: 80px 20px;
@@ -108,4 +159,78 @@
     font-size: 30px;
     color: #ff6f61;
     margin-left: 10px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+
+    .conclusion {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .conclusion h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .conclusion p {
+        font-size: 16px;
+    }
+
+    .quotes {
+        padding: 40px 20px;
+    }
+
+    .quotes .content {
+        padding: 20px;
+    }
+
+    .quotes p {
+        font-size: 16px;
+    }
+}
+
+/* Additional Mobile Optimization */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 12px;
+    }
+    
+    .conclusion .content {
+        padding: 20px;
+    }
+
+    .conclusion h2 {
+        font-size: 24px;
+    }
+
+    .conclusion p {
+        font-size: 14px;
+    }
+
+    .quotes .content {
+        padding: 15px;
+    }
+
+    .quotes p {
+        font-size: 14px;
+    }
 }

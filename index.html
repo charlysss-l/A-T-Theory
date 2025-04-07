@@ -10,6 +10,11 @@
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="logo">A&T Theory</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <ul class="navList">
                 <li class="navLink"><a href="index.html">Home</a></li>
                 <li class="navLink"><a href="overview.html">Overview</a></li>
@@ -29,11 +34,11 @@
     </section>
 
     <section class="about">
-        <div class="content">
-            <p>
-                This website explores Albert Bandura’s Self-Efficacy Theory and its impact on motivation, learning, 
-                and success.
-            </p>
+        <p>
+            This website explores Albert Bandura’s Self-Efficacy Theory and its impact on motivation, learning, 
+            and success.
+        </p>
+        <div class="about-images-container">
             <img src="images/about (1).jpg" alt="Self-Efficacy" class="about-image">
             <img src="images/about (2).jpg" alt="Self-Efficacy" class="about-image">
             <img src="images/about (3).jpg" alt="Self-Efficacy" class="about-image">
@@ -49,7 +54,6 @@
             <h2>Albert Bandura</h2>
         </div>
     </section>
-    
     
     <section class="creators">
         <div class="content">
@@ -68,5 +72,12 @@
         </div>
     </section>
 
+    <script>
+        // JavaScript to toggle the menu
+        function toggleMenu() {
+            var navList = document.querySelector('.navList');
+            navList.classList.toggle('active');  // Toggle 'active' class on menu
+        }
+    </script>
 </body>
 </html>

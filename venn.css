@@ -1,39 +1,91 @@
-
-/* Header Styles */
+/* Navbar styles */
 .header {
     background-color: transparent;
     padding: 20px 0;
 }
-
 .navbar {
+    position: relative;
     text-align: center;
+}
+
+/* Hamburger menu (burger icon) */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile navbar hidden by default */
+.navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    
 }
 .logo{
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.navList {
-    list-style-type: none;
-}
+    font-size: 30px;
 
-.navLink {
-    display: inline-block;
+}
+.navLink a{
     margin: 0 15px;
-}
-
-.navLink a {
-    color: black;
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-   
+    color: black;
+}
+.navLink a:hover{
+    color: rgb(40, 40, 144);
 }
 
-.navLink a:hover {
-    color: #4c8eaf;
+/* Burger Menu: Show when screen is small */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links by default on mobile */
+    .navList {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    /* Show the burger icon on mobile */
+    .burger {
+        display: flex;
+    }
+
+    /* Show the navList when the burger is clicked */
+    .navList.active {
+        display: flex;
+    }
+
+    /* Adjust nav links inside the burger menu */
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
 }
 
 
@@ -51,7 +103,6 @@ section {
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: #ffffffeb;
-
     border-radius: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -110,8 +161,8 @@ circle:hover {
     font-weight: bold;
     color: #8d9fb8;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
-
 }
+
 #self-efficacy-vs-self-esteem-vs-growth-mindset p{
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.587);
@@ -120,7 +171,6 @@ circle:hover {
     text-align: center;
     width: 500px;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
-
 }
 
 #self-efficacy-vs-self-esteem-vs-growth-mindset{
@@ -128,24 +178,23 @@ circle:hover {
 }
 
 /* List Styling */
-self-efficacy-vs-self-esteem-vs-growth-mindset ul, ol {
+#self-efficacy-vs-self-esteem-vs-growth-mindset ul, ol {
     text-align: left;
     padding-left: 20px;
     font-size: 16px;
     line-height: 1.6;
 }
 
-self-efficacy-vs-self-esteem-vs-growth-mindset ul li, ol li {
+#self-efficacy-vs-self-esteem-vs-growth-mindset ul li, ol li {
     margin-bottom: 10px;
 }
 
-self-efficacy-vs-self-esteem-vs-growth-mindset ul li strong,#advantages-of-self-efficacy ul li strong,  ol li strong {
+#self-efficacy-vs-self-esteem-vs-growth-mindset ul li strong, #advantages-of-self-efficacy ul li strong, ol li strong {
     color: #e76f51;
 }
 
 /* Advantages Section */
 #advantages-of-self-efficacy {
-   
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -158,9 +207,110 @@ self-efficacy-vs-self-esteem-vs-growth-mindset ul li strong,#advantages-of-self-
 }
 
 #implications-of-self-efficacy {
-
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+}
+
+
+/* Responsive Design for Smaller Screens (Phones/Tablets) */
+
+/* Adjusting Header Logo and Navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+    section {
+        padding: 30px 15px;
+    }
+
+    #self-efficacy-vs-self-esteem-vs-growth-mindset h1,
+    #self-efficacy-vs-self-esteem-vs-growth-mindset h2 {
+        font-size: 24px;
+    }
+
+    #self-efficacy-vs-self-esteem-vs-growth-mindset p {
+        font-size: 14px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #self-efficacy-vs-self-esteem-vs-growth-mindset ul, ol {
+        font-size: 14px;
+    }
+
+    #advantages-of-self-efficacy {
+        padding: 20px 10px;
+    }
+
+    #advantages-of-self-efficacy ul {
+        padding-left: 20px;
+    }
+
+    .venn-diagram-placeholder {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .venn-diagram-placeholder text {
+        font-size: 12px;
+    }
+}
+
+/* Further Adjustments for Very Small Screens (Mobile Devices) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #self-efficacy-vs-self-esteem-vs-growth-mindset h1,
+    #self-efficacy-vs-self-esteem-vs-growth-mindset h2 {
+        font-size: 20px;
+    }
+
+    #self-efficacy-vs-self-esteem-vs-growth-mindset p {
+        font-size: 12px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .venn-diagram-placeholder {
+        width: 80%;
+        padding: 5px;
+    }
+
+    .venn-diagram-placeholder text {
+        font-size: 10px;
+    }
+
+    #advantages-of-self-efficacy {
+        padding: 15px 5px;
+    }
+
+    #advantages-of-self-efficacy ul {
+        padding-left: 15px;
+    }
+
+    #implications-of-self-efficacy {
+        padding: 15px 5px;
+    }
 }

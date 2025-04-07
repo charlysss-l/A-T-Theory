@@ -1,37 +1,91 @@
+/* Navbar styles */
 .header {
     background-color: transparent;
     padding: 20px 0;
 }
-
 .navbar {
+    position: relative;
     text-align: center;
+}
+
+/* Hamburger menu (burger icon) */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile navbar hidden by default */
+.navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    
 }
 .logo{
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.navList {
-    list-style-type: none;
-}
+    font-size: 30px;
 
-.navLink {
-    display: inline-block;
+}
+.navLink a{
     margin: 0 15px;
-}
-
-.navLink a {
-    color: black;
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-   
+    color: black;
+}
+.navLink a:hover{
+    color: rgb(40, 40, 144);
 }
 
-.navLink a:hover {
-    color: #4c8eaf;
+/* Burger Menu: Show when screen is small */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links by default on mobile */
+    .navList {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    /* Show the burger icon on mobile */
+    .burger {
+        display: flex;
+    }
+
+    /* Show the navList when the burger is clicked */
+    .navList.active {
+        display: flex;
+    }
+
+    /* Adjust nav links inside the burger menu */
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
 }
 
 
@@ -78,27 +132,27 @@
     justify-content: center;
     flex-direction: column;
 }
-#definition h2{
+
+#definition h2 {
     font-size: 30px;
 }
+
 #definition p {
     font-size: 20px;
     margin-top: 20px;
 }
 
-
 /* History Section */
-#history{
+#history {
     background-color: black;
     color: white;
     height: auto;
     padding-top: 20px;
 }
+
 #history .title {
     text-align: center;
     margin-bottom: 20px;
-    
-   
 }
 
 #history h2 {
@@ -110,7 +164,6 @@
     margin: 20px 20px;
     padding: 20px;
     border-radius: 8px;
-    
 }
 
 #history h3.year {
@@ -121,10 +174,12 @@
 /* Key Concepts Section */
 .keyConcepts {
     background: #ffffff;
-    height: 40vh;
+    height: auto; /* Adjusted to auto so it won't overflow */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Added column direction */
+    padding: 20px;
 }
 
 .keyConcepts h1 {
@@ -138,6 +193,8 @@
     padding-left: 0;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap in a row if necessary */
+    justify-content: center; /* Center items on small screens */
 }
 
 .keyItem {
@@ -146,6 +203,9 @@
     padding: 15px;
     border-radius: 8px;
     line-height: 2;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit the width on larger screens */
+    text-align: left; /* Text alignment */
 }
 
 .keyItem p {
@@ -159,32 +219,151 @@
     padding: 40px 20px;
     margin-top: 40px;
     border-radius: 8px;
-    height: 100vh;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse; /* Added this to place text on top of image */
     justify-content: center;
     align-items: center;
 }
-#bandura-legacy h2{
+
+#bandura-legacy h2 {
     font-size: 40px;
 }
-.imageText{
-    display: flex;
-}
-#bandura-legacy p{
-    width: 600px;
+
+#bandura-legacy p {
+    width: 90%;
+    max-width: 800px;
     text-align: justify;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 2.5;
 }
+
 #bandura-legacy img {
     margin-top: 20px;
     border-radius: 8px;
-    width: 450px;
-    height: 450px;
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    max-width: 500px; /* Maximum image width */
+}
+
+/* Responsive Styling for Phones */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+    
+    /* Hero Section */
+    #intro h1 {
+        font-size: 50px;
+    }
+
+    #intro p {
+        font-size: 18px;
+    }
+
+    #intro a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    /* Definition Section */
+    #definition h2 {
+        font-size: 24px;
+    }
+
+    #definition p {
+        font-size: 16px;
+    }
+
+    /* History Section */
+    #history h2 {
+        font-size: 24px;
+    }
+
+    #history .earlyFoundations, 
+    #history .boboDoll, 
+    #history .shiftCognitive {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    /* Key Concepts Section */
+    .keyConcepts h1 {
+        font-size: 28px;
+    }
+
+    .keyList {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .keyItem {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    /* Bandura's Legacy Section */
+    #bandura-legacy h2 {
+        font-size: 28px;
+    }
+
+    #bandura-legacy p {
+        width: 90%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    #bandura-legacy img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Additional adjustments for smaller screens (phones) */
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 12px;
+    }
+
+    .keyConcepts h1 {
+        font-size: 24px;
+    }
+
+    .quote p {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .imageText {
+        flex-direction: column;
+    }
+
+    #bandura-legacy p {
+        font-size: 14px;
+    }
+
+    #bandura-legacy img {
+        width: 80%;
+        height: auto;
+    }
 }
 

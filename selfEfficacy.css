@@ -1,39 +1,92 @@
+/* Navbar styles */
 .header {
     background-color: transparent;
     padding: 20px 0;
 }
-
 .navbar {
+    position: relative;
     text-align: center;
+}
+
+/* Hamburger menu (burger icon) */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile navbar hidden by default */
+.navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    
 }
 .logo{
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.navList {
-    list-style-type: none;
-}
+    font-size: 30px;
 
-.navLink {
-    display: inline-block;
+}
+.navLink a{
     margin: 0 15px;
-}
-
-.navLink a {
-    color: black;
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-   
+    color: black;
+}
+.navLink a:hover{
+    color: rgb(40, 40, 144);
 }
 
-.navLink a:hover {
-    color: #4c8eaf;
-}
+/* Burger Menu: Show when screen is small */
+@media screen and (max-width: 768px) {
+    /* Hide the nav links by default on mobile */
+    .navList {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
 
+    /* Show the burger icon on mobile */
+    .burger {
+        display: flex;
+    }
+
+    /* Show the navList when the burger is clicked */
+    .navList.active {
+        display: flex;
+    }
+
+    /* Adjust nav links inside the burger menu */
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+}
 
 /* Section Styles */
 section {
@@ -62,7 +115,6 @@ h2 {
     background-color: #eef0fa;
     border-radius: 8px;
     padding: 30px;
-    
 }
 
 #self-efficacy-theory p {
@@ -86,22 +138,100 @@ h2 {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 30px;
+    background: url('images/self-eff.jpg') center/cover no-repeat fixed;
+}
+#influences h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 #influences ol {
     list-style-type: decimal;
     margin-left: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.694);
+    margin: 20px;
 }
 
 #influences li {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 15px;
+    margin: 20px;
+
 }
 
 #influences strong {
     font-weight: 600;
 }
 
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navLink {
+        margin: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    #self-efficacy-theory, #influences {
+        padding: 20px;
+    }
+
+    #self-efficacy-theory p, #influences li {
+        font-size: 16px;
+    }
+}
+
+/* Additional Mobile Optimization for Small Screens (Phones) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navLink a {
+        font-size: 12px;
+    }
 
 
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    #self-efficacy-theory p, #influences li {
+        font-size: 14px;
+    }
+
+    #self-efficacy-theory ul {
+        margin-left: 15px;
+    }
+}
