@@ -1,0 +1,170 @@
+
+/* Header Styles */
+.header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.navbar {
+    text-align: center;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navList {
+    list-style-type: none;
+}
+
+.navLink {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navLink a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+   
+}
+
+.navLink a:hover {
+    color: #4c8eaf;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-home-self.jpg') center/cover no-repeat;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.hero a {
+    background-color: #4c61af;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background-color: #3e5091;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.about-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Quote Section */
+.quote {
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: url('images/home-quote.jpg') bottom/cover no-repeat;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.quote p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.quote h2 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Creators Section */
+.creators {
+    background-color: #f9f9f9;
+    border-top: 1px solid rgb(164, 147, 51);
+    padding: 40px 20px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creators .content {
+    text-align: center;
+}
+
+.creators p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.them {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    align-items: center;
+}
+
+.aliea, .tracy {
+    text-align: center;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.aliea h2, .tracy h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.aliea h2:hover, .tracy h2:hover{
+    color: rgb(83, 72, 6);
+}
